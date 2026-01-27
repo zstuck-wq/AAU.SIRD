@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('/content/CourseOffering-1_27_2026.csv')
+df = pd.read_csv('CourseOffering-1_27_2026.csv')
 df = df[df['LearningCourse.CourseCode__c'].str.contains(r'(^[A-Z]{3}[0-9]{3}$)')]
 
 
