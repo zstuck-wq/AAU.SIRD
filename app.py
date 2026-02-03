@@ -8,7 +8,7 @@ df = df[df['LearningCourse.CourseCode__c'].str.contains(r'(^[A-Z]{3}[0-9]{3}$)')
 NAs = {'LearningCourse.Description': '**Missing course description**','LearningCourse.CourseLearningOutcomes__c': "**Missing learning outcomes**"}
 df = df.fillna(value=NAs)
 
-
+st.logo("https://res.cloudinary.com/aauni/w_352,h_72,c_fill,q_auto:best,f_auto/web/2020/04/aau-logo.png")
 
 st.title("**AAU Course Catalog**", text_alignment="center")
 
