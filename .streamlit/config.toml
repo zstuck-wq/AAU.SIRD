@@ -1,30 +1,5 @@
 [[theme.fontFaces]]
-family = "SpaceGrotesk"
-url = "app/static/SpaceGrotesk-VariableFont_wght.ttf"
-
-[[theme.fontFaces]]
-family = "SpaceMono"
-url = "app/static/SpaceMono-Bold.ttf"
-style = "normal"
-weight = 700
-
-[[theme.fontFaces]]
-family = "SpaceMono"
-url = "app/static/SpaceMono-BoldItalic.ttf"
-style = "italic"
-weight = 700
-
-[[theme.fontFaces]]
-family = "SpaceMono"
-url = "app/static/SpaceMono-Italic.ttf"
-style = "italic"
-weight = 400
-
-[[theme.fontFaces]]
-family = "SpaceMono"
-url = "app/static/SpaceMono-Regular.ttf"
-style = "normal"
-weight = 400
+"Nunito:https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 
 [theme]
 primaryColor = "#cb785c"
@@ -36,7 +11,7 @@ borderColor = "#d3d2ca"
 showWidgetBorder = true
 baseRadius = "0.75rem"
 buttonRadius = "full"
-font = "SpaceGrotesk"
+font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 headingFontWeights = [600,500,500,500,500,500]
 headingFontSizes = ["3rem", "2rem"]
 codeFont = "SpaceMono"
