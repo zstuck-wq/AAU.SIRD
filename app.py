@@ -44,16 +44,10 @@ if len(code_select) != 0 and len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if not row[4].isnull():
-        st.markdown(f"{row[4]}", unsafe_allow_html=True)
-      else:
-        st.mardown(f"**{row[3]}** is missing this information")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True) 
+      st.markdown(f"{row[5]}", unsafe_allow_html=True) 
 
 elif len(course_select) != 0:
   df = df[df['LearningCourse.Name'].isin(course_select)].reset_index(drop=True)
@@ -62,17 +56,10 @@ elif len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
-
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
   
 elif len(code_select) != 0:
   df = df[df['LearningCourse.CourseCode__c'].isin(code_select)].reset_index(drop=True)
@@ -81,16 +68,10 @@ elif len(code_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
 
 elif school_select and term_select is not None:
   df = df[df["AcademicSession.Name"] == term_select].reset_index(drop=True)
@@ -100,16 +81,10 @@ elif school_select and term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
 
 elif school_select is not None:
   df = df[df['LearningCourse.ParentProvider__c'] == school_select].reset_index(drop=True)
@@ -118,16 +93,10 @@ elif school_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
 
 elif term_select is not None:
   df = df[df["AcademicSession.Name"] == term_select].reset_index(drop=True)
@@ -136,31 +105,19 @@ elif term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
 
 else:
   df = df.drop_duplicates(subset=['LearningCourse.CourseCode__c'], keep='first').reset_index(drop=True).sort_values(by=['LearningCourse.CourseCode__c'])
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[4]}", unsafe_allow_html=True)
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5].isnull():
-        st.mardown(f"**{row[3]}** is missing this information")
-      else:
-         st.markdown(f"{row[5]}", unsafe_allow_html=True)
+      st.markdown(f"{row[5]}", unsafe_allow_html=True)
 
 st.divider()
