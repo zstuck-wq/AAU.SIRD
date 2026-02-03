@@ -20,9 +20,9 @@ col1, col2 = st.columns(2)
 
 terms = sorted(df['AcademicSession.Name'].unique(), reverse=True)
 
-schools = ["School of Arts, Humanities, and Social Sciences",
+schools = sorted(["School of Arts, Humanities, and Social Sciences",
            "School of International Relations and Diplomacy",
-           "School of Business"]
+           "School of Business"])
           
 codes = df['LearningCourse.CourseCode__c'].unique()
 codes = np.sort(codes)
