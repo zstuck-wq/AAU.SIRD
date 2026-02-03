@@ -44,7 +44,7 @@ if len(code_select) != 0 and len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True) 
@@ -56,7 +56,7 @@ elif len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
@@ -68,7 +68,7 @@ elif len(code_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
@@ -81,7 +81,7 @@ elif school_select and term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
@@ -93,7 +93,7 @@ elif school_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
@@ -105,7 +105,7 @@ elif term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
@@ -115,7 +115,7 @@ else:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      st.write(f"{row[4]}")
+      st.markdown(f"{row[4]}", unsafe_allow_html=True)
       st.divider()
       st.write("**Course Learning Outcomes**")
       st.markdown(f"{row[5]}", unsafe_allow_html=True)
