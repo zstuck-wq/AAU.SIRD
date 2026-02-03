@@ -5,6 +5,8 @@ import numpy as np
 
 df = pd.read_csv('CourseOffering-1_27_2026.csv')
 df = df[df['LearningCourse.CourseCode__c'].str.contains(r'(^[A-Z]{3}[0-9]{3}$)')]
+NAs = {'LearningCourse.Description': '**Missing course description**','LearningCourse.CourseLearningOutcomes__c': "**Missing learning outcomes**"}
+df = df.fillna(value=NAs)
 
 
 
