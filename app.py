@@ -44,13 +44,13 @@ if len(code_select) != 0 and len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information") 
@@ -62,13 +62,13 @@ elif len(course_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
@@ -80,13 +80,13 @@ elif len(code_select) != 0:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}", expanded = True):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
@@ -99,13 +99,13 @@ elif school_select and term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
@@ -117,13 +117,13 @@ elif school_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
@@ -135,13 +135,13 @@ elif term_select is not None:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
@@ -151,13 +151,13 @@ else:
   for row in df.itertuples(index = False):
     with st.expander(f"{row[3]} - {row[6]}"):
       st.write("**Course Description**")
-      if row[4] != '':
+      if row[4] != 'NaN':
         st.markdown(f"{row[4]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
       st.divider()
       st.write("**Course Learning Outcomes**")
-      if row[5] != '':
+      if row[5] != 'NaN':
         st.markdown(f"{row[5]}", unsafe_allow_html=True)
       else:
         st.mardown(f"**{row[3]}** is missing this information")
