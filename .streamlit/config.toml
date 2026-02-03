@@ -5,7 +5,7 @@ url = "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 [theme]
 primaryColor = "#cb785c"
 backgroundColor = "#f4f4f1"
-secondaryBackgroundColor = "#ecebe3"
+secondaryBackgroundColor = "#e0e0d9"
 textColor = "#343f49"
 linkColor = "#3d3a2a"
 borderColor = "#d3d2ca"
