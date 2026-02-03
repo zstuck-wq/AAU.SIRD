@@ -6,7 +6,7 @@ url = "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 primaryColor = "#cb785c"
 backgroundColor = "#fdfdf8"
 secondaryBackgroundColor = "#ecebe3"
-textColor = "#6a7884"
+textColor = "#343f49"
 linkColor = "#3d3a2a"
 borderColor = "#d3d2ca"
 showWidgetBorder = true
