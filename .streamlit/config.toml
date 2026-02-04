@@ -3,7 +3,7 @@ family = "Nunito"
 url = "https://fonts.googleapis.com/css2?family=Nunito&display=swap"
 
 [theme]
-primaryColor = "#cb785c"
+primaryColor = "#f4f4f1"
 backgroundColor = "#f4f4f1"
 secondaryBackgroundColor = "#e0e0d9"
 textColor = "#343f49"
